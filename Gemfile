@@ -16,6 +16,7 @@ gem 'uglifier', '>= 2.7.2'
 # views
 gem 'simple_form'
 gem 'slim'
+gem 'devise'
 
 # main
 gem 'decent_decoration'
@@ -63,4 +64,5 @@ group :development do
   gem 'foreman', require: false
   gem 'letter_opener'
   gem 'web-console'
+  gem 'slim-rails'
 end

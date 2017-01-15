@@ -47,6 +47,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bcrypt (3.1.11)
     brakeman (3.4.1)
     builder (3.2.2)
     bullet (5.5.0)
@@ -87,6 +88,12 @@ GEM
       decent_exposure (~> 3.0)
     decent_exposure (3.0.2)
       activesupport (>= 4.0)
+    devise (4.2.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
     dotenv (2.1.1)
@@ -150,6 +157,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
+    orm_adapter (0.5.0)
     parser (2.3.3.1)
       ast (~> 2.2)
     pg (0.19.0)
@@ -252,6 +260,10 @@ GEM
     slim (3.0.7)
       temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
+    slim-rails (3.1.1)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (~> 3.0)
     slim_lint (0.10.0)
       rake (>= 10, < 13)
       rubocop (>= 0.36.0)
@@ -292,6 +304,8 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.1.3)
     uniform_notifier (1.10.0)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -323,6 +337,7 @@ DEPENDENCIES
   database_cleaner
   decent_decoration
   decent_exposure (~> 3.0.2)
+  devise
   dotenv-rails
   email_spec
   factory_girl_rails
@@ -350,6 +365,7 @@ DEPENDENCIES
   seedbank
   simple_form
   slim
+  slim-rails
   slim_lint
   spring
   spring-commands-rspec

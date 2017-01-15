@@ -1,0 +1,19 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title
+      | JobAggregator
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+  .row
+    .columns
+      - flash.each do |type, content|
+        div(data-alert class="alert-box #{type}" tabindex="0" aria-live="assertive" role="alertdialog")
+          = content
+          button.close(tabindex="0" aria-label="Close Alert") &times;
+
+      = yield
