@@ -1,44 +1,66 @@
 source 'https://rubygems.org'
+ruby '2.3.1'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
-# Use Puma as the app server
 gem 'puma', '~> 3.0'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+
+# assets
 gem 'coffee-rails', '~> 4.2'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
+gem 'foundation-rails', '~> 6.2.3.0'
 gem 'jquery-rails'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'sass-rails', '~> 5.0'
+gem 'therubyracer', platforms: :ruby
+gem 'uglifier', '>= 2.7.2'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# views
+gem 'simple_form'
+gem 'slim'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+# main
+gem 'decent_decoration'
+gem 'decent_exposure', '~> 3.0.2'
+gem 'metamagic'
+gem 'responders'
+
+group :test do
+  gem 'capybara'
+  gem 'codeclimate-test-reporter', require: false
+  gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'formulaic'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'rspec-its'
+  gem 'webmock', require: false
 end
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console'
+group :development, :test do
+  gem 'awesome_print'
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false
+  gem 'byebug'
+  gem 'coffeelint'
+  gem 'dotenv-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
   gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'scss_lint', require: false
+  gem 'seedbank'
+  gem 'slim_lint', require: false
   gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-rubocop'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+group :development do
+  gem 'bullet'
+  gem 'foreman', require: false
+  gem 'letter_opener'
+  gem 'web-console'
+end
