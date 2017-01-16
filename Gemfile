@@ -17,6 +17,8 @@ gem 'uglifier', '>= 2.7.2'
 gem 'simple_form'
 gem 'slim'
 gem 'devise'
+gem 'mechanize'
+gem 'geocoder'
 
 # main
 gem 'decent_decoration'
