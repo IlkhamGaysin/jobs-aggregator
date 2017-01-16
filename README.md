@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple aggregator of jobs
 
-Things you may want to cover:
+[![Build Status](https://semaphoreci.com/api/v1/ilkhamgaysin/jobs-aggregator/branches/master/shields_badge.svg)](https://semaphoreci.com/ilkhamgaysin/jobs-aggregator)
 
-* Ruby version
+## Dependencies
 
-* System dependencies
+* PostgreSQL
+* Ruby 2.3.1
+* PhantomJS
+* Rails 5
 
-* Configuration
+## Quick Start
 
-* Database creation
+```bash
+# clone
+git clone git@github.com:IlkhamGaysin/jobs-aggregator.git
+cd jobs-aggregator
 
-* Database initialization
+# run setup script
+bin/setup
 
-* How to run the test suite
+# configure ENV variables in .env
+vim .env
 
-* Services (job queues, cache servers, search engines, etc.)
+# run server on 5000 port
+bin/server
+```
 
-* Deployment instructions
+## Scripts
 
-* ...
+* `bin/setup` - setup required gems and migrate db if needed
+* `bin/quality` - run brakeman and rails_best_practices for the app
+* `bin/ci` - should be used in the CI to run specs
