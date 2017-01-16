@@ -14,11 +14,11 @@ gem 'therubyracer', platforms: :ruby
 gem 'uglifier', '>= 2.7.2'
 
 # views
+gem 'devise'
+gem 'geocoder'
+gem 'mechanize'
 gem 'simple_form'
 gem 'slim'
-gem 'devise'
-gem 'mechanize'
-gem 'geocoder'
 
 # main
 gem 'decent_decoration'
@@ -65,6 +65,6 @@ group :development do
   gem 'bullet'
   gem 'foreman', require: false
   gem 'letter_opener'
-  gem 'web-console'
   gem 'slim-rails'
+  gem 'web-console'
 end

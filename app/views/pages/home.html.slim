@@ -3,7 +3,7 @@
     h1 Home
     - if user_signed_in?
       .button-group
-        = link_to "Sign out", destroy_user_session_path, class: "button", method: :delete
-        = link_to "Jobs", jobs_path, class: "button"
+        = link_to 'Sign out', destroy_user_session_path, class: 'button', method: :delete
+        = link_to 'Jobs', jobs_path, class: 'button'
     - else
-      = link_to "Sign in", new_user_session_path, class: "button"
+      = link_to 'Sign in', new_user_session_path, class: 'button'

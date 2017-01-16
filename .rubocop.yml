@@ -66,3 +66,6 @@ RSpec/MultipleExpectations:
 
 RSpec/ExampleLength:
   Max: 12
+
+Style/EmptyMethod:
+  Enabled: false
